@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+#ls
+alias l='ls -F'
+alias la='ls -A'
+alias lm='ls -m'
+alias lo='ls -o'
+alias ll='ls -l'
+alias lal='ls -al'
+alias lla='ls -la'
+
+alias cls="clear;ls"
+
+#cd
+alias cd1='cd ..'
+alias cd2='cd ../..'
+alias cd3='cd ../../..'
+alias cd4='cd ../../../..'
+alias cd5='cd ../../../../..'
+
+#history
+alias history='history -i'
+alias history-all='history 0'
+
+
+#other
+alias host='more /etc/hosts'
+alias hosts='more /etc/hosts'

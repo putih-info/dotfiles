@@ -1,0 +1,88 @@
+" 設定
+
+set modelines=0		" モードラインを使用
+set fenc=utf-8		" 文字コードをUFT-8に設定
+set encoding=utf-8	" エンコード
+set nobackup		" バックアップファイルを作らない
+set noswapfile		" スワップファイルを作らない
+set autoread		" 編集中のファイルが変更されたら自動で読み直す
+set hidden			" バッファが編集中でもその他のファイルを開けるように
+set showcmd			" 入力中のコマンドをステータスに表示する
+set nocompatible	" Vimをvi互換モードで使用する(十字キーでABCDが出なくする)
+
+
+" ファイル関連
+set confirm    " 保存されていないファイルがあるときは終了前に保存確認
+set hidden     " 保存されていないファイルがあるときでも別のファイルを開くことが出来る
+set autoread   " 外部でファイルに変更がされた場合は読みなおす
+set nobackup   " ファイル保存時にバックアップファイルを作らない
+set noswapfile " ファイル編集中にスワップファイルを作らない
+
+
+" 画面表示
+
+syntax enable		" syntaxハイライト オン
+autocmd ColorScheme * highlight LineNr ctermfg=11	" 行の色
+
+hi Comment ctermfg=34	" コメントの色
+set number         		" 行番号を表示する
+"set cursorline     	" カーソル行の背景色を変える
+"set cursorcolumn   	" カーソル位置のカラムの背景色を変える
+set laststatus=2		" ステータスラインを常に表示
+set cmdheight=2			" メッセージ表示欄を2行確保
+"set showmatch			" 対応する括弧を強調表示
+"set helpheight=999		" ヘルプを画面いっぱいに開く
+set list				" 不可視文字を表示
+set listchars=tab:\▸\-,eol:↲,extends:❯,precedes:❮		" 不可視文字の表示記号指定
+
+
+" 操作
+
+set backspace=indent,eol,start	" Backspaceキーの影響範囲に制限を設けない
+set whichwrap=b,s,h,l,<,>,[,]	" 行頭行末の左右移動で行をまたぐ
+set scrolloff=8					" 上下8行の視界を確保
+set sidescrolloff=16			" 左右スクロール時の視界を確保
+set sidescroll=1				" 左右スクロールは一文字づつ行う
+
+" 折り返し時に表示行単位での移動できるようにする
+nnoremap j gj
+nnoremap k gk
+
+set shellslash					" パスの区切り文字を / にする
+"set iminsert=2					" インサートモードから抜けると自動的にIMEをオフにする
+"set clipboard=unnamed,unnamedplus		" OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
+
+" 文字
+
+set showmatch		" 括弧入力時の対応する括弧を表示
+"set expandtab		" タブ入力を複数の空白入力に置き換える
+set tabstop=4		" 画面上でタブ文字が占める幅
+set shiftwidth=4	" 自動インデントでずれる幅
+set softtabstop=2	" 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set autoindent		" 改行時に前の行のインデントを継続する
+set smartindent		" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+
+
+" 検索
+
+set hlsearch		" 検索文字列をハイライトする
+set incsearch		" インクリメンタルサーチを行う
+set ignorecase		" 大文字と小文字を区別しない
+set smartcase		" 大,小文字が混在したワードで検索を行った場合、大,小文字を区別する
+set wrapscan		" 最後尾まで検索を終えたら次の検索で先頭に移る
+set gdefault		" 置換の時 g オプションをデフォルトで有効にする
+nmap <Esc><Esc> :nohlsearch<CR><Esc>		" ESC連打でハイライト解除
+
+
+" 補完
+
+set wildmode=list:longest					" コマンドラインの補完
+set history=10000							" コマンドラインの履歴を保存する
+set wildmenu wildmode=list:longest,full		" コマンドラインモードでTABキーによるファイル名補完を有効にする
+
+
+
+" 音
+
+set noerrorbells 		" エラーメッセージの表示時にビープを鳴らさない
+set visualbell t_vb=	" ビジュアルベルの表示内容。空文字列なら何もしない -> 音なし

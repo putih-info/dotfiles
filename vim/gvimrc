@@ -1,0 +1,14 @@
+
+colorscheme koehler			" カラースキーム
+set background=dark			" ダーク系のカラースキームを使う
+
+if has('mac')
+    set guifont=VL_Gothic:h16	" フォント VL_Gothic
+    set linespace=0				" 行間
+    set mouse=a				" マウスの入力を受け付ける
+endif
+
+" turn off disabling IM at entering input mode
+if exists('&imdisableactivate')
+    set noimdisableactivate
+endif
