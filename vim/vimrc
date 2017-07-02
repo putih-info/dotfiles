@@ -1,3 +1,4 @@
+
 " 設定
 
 set modelines=0		" モードラインを使用
@@ -12,6 +13,7 @@ set nocompatible	" Vimをvi互換モードで使用する(十字キーでABCDが
 
 
 " ファイル関連
+
 set confirm    " 保存されていないファイルがあるときは終了前に保存確認
 set hidden     " 保存されていないファイルがあるときでも別のファイルを開くことが出来る
 set autoread   " 外部でファイルに変更がされた場合は読みなおす
@@ -25,12 +27,13 @@ syntax enable		" syntaxハイライト オン
 autocmd ColorScheme * highlight LineNr ctermfg=11	" 行の色
 
 hi Comment ctermfg=34	" コメントの色
+set display=lastline	" 一行の文字数が多くても全て表示
 set number         		" 行番号を表示する
 "set cursorline     	" カーソル行の背景色を変える
 "set cursorcolumn   	" カーソル位置のカラムの背景色を変える
 set laststatus=2		" ステータスラインを常に表示
 set cmdheight=2			" メッセージ表示欄を2行確保
-"set showmatch			" 対応する括弧を強調表示
+set showmatch			" 対応する括弧を強調表示
 "set helpheight=999		" ヘルプを画面いっぱいに開く
 set list				" 不可視文字を表示
 set listchars=tab:\▸\-,eol:↲,extends:❯,precedes:❮		" 不可視文字の表示記号指定
@@ -44,6 +47,10 @@ set scrolloff=8					" 上下8行の視界を確保
 set sidescrolloff=16			" 左右スクロール時の視界を確保
 set sidescroll=1				" 左右スクロールは一文字づつ行う
 
+" 数字のインクリメント，デクリメント　コマンドモードで使用
+nnoremap + <C-a>
+nnoremap - <C-x>
+
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
@@ -52,9 +59,11 @@ set shellslash					" パスの区切り文字を / にする
 "set iminsert=2					" インサートモードから抜けると自動的にIMEをオフにする
 "set clipboard=unnamed,unnamedplus		" OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
 
+
 " 文字
 
 set showmatch		" 括弧入力時の対応する括弧を表示
+set matchtime=1		" showmatchのカーソルが飛ぶ時間 0.1秒の何倍にするか
 "set expandtab		" タブ入力を複数の空白入力に置き換える
 set tabstop=4		" 画面上でタブ文字が占める幅
 set shiftwidth=4	" 自動インデントでずれる幅
@@ -79,10 +88,12 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>		" ESC連打でハイライト解除
 set wildmode=list:longest					" コマンドラインの補完
 set history=10000							" コマンドラインの履歴を保存する
 set wildmenu wildmode=list:longest,full		" コマンドラインモードでTABキーによるファイル名補完を有効にする
-
+set pumheight=3								" 補完メニューの高さ
 
 
 " 音
 
 set noerrorbells 		" エラーメッセージの表示時にビープを鳴らさない
 set visualbell t_vb=	" ビジュアルベルの表示内容。空文字列なら何もしない -> 音なし
+
+
