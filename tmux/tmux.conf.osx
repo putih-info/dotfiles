@@ -1,0 +1,6 @@
+# マウス操作を有効にする
+set -g mouse on
+
+# クリップボード共有を有効にする
+set-option -g default-command "reattach-to-user-namespase -l zsh"
+

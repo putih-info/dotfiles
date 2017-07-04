@@ -12,6 +12,7 @@ ln -s dotfiles/zsh/zshenv ~/.zshenv
 ln -s dotfiles/zsh/zsh_history ~/.zsh_history
 
 ln -s dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s dotfiles/tmux/tmux.conf.osx ~/.tmux.conf.osx
 
 ln -s dotfiles/vim/vimrc ~/.vimrc
 ln -s dotfiles/vim/gvimrc ~/.gvimrc
