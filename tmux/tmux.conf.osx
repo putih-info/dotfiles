@@ -2,5 +2,10 @@
 set -g mouse on
 
 # クリップボード共有を有効にする
-set-option -g default-command "reattach-to-user-namespase -l zsh"
+#set-option -g default-command "reattach-to-user-namespase -l zsh"
+
+
+
+# バッテリー残量表示版ステータスバー (/usr/local/bin/ に755でbatteryを置いておくこと)
+set-option -g status-right '#(battery --tmux) #[fg=colour255,bg=colour246] %Y/%m/%d %H:%M:%S '
 
