@@ -23,7 +23,7 @@ alias cd5='cd ../../../../..'
 # history
 alias history='history -i'
 alias history-all='history 0'
-alias history-c ='cat /dev/null > .zsh_history'
+alias history-c='cat /dev/null > ~/.zsh_history'
 
 
 # global
