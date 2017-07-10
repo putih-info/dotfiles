@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-#ls
+# ls
 alias l='ls -F'
 alias la='ls -A'
 alias lm='ls -m'
@@ -11,18 +11,30 @@ alias lla='ls -la'
 
 alias cls="clear;ls"
 
-#cd
+
+# cd
 alias cd1='cd ..'
 alias cd2='cd ../..'
 alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
 
-#history
+
+# history
 alias history='history -i'
 alias history-all='history 0'
+alias history-c ='cat /dev/null > .zsh_history'
 
 
-#other
+# global
+alias -g G='| grep'
+alias -g T='| tail'
+alias -g C='cat'
+
+
+# other
 alias host='more /etc/hosts'
 alias hosts='more /etc/hosts'
+
+
+
