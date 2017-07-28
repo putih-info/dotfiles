@@ -15,6 +15,8 @@ ln -si dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -si dotfiles/tmux/tmux.conf.osx ~/.tmux.conf.osx
 
 ln -si dotfiles/vim/vimrc ~/.vimrc
+ln -si dotfiles/vim/vimrc.css ~/.vimrc.css
+ln -si dotfiles/vim/vimrc.html ~/.vimrc.html
+ln -si dotfiles/vim/vimrc.java ~/.vimrc.java
 ln -si dotfiles/vim/gvimrc ~/.gvimrc
-
 

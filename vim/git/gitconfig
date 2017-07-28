@@ -1,0 +1,32 @@
+[url "github:"]
+	  InsteadOf = https://github.com/
+	  InsteadOf = git@github.com:
+
+[push]
+	  default = simple
+[user]
+	  name = putih-info
+	  email = putih.info@gmail.com
+
+[color]
+	  ui = true
+
+[core]
+	  excludesfile = ~/.gitgnore_global
+	  editor = vim
+
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Users/owner/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+
+[alias]
+	s = status
+	com = commit
+	l = log
+
