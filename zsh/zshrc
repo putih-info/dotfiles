@@ -22,7 +22,6 @@ case "${OSTYPE:-}" in
 esac
 
 
-
 ### cd ###
 setopt auto_cd						# cd省略
 setopt auto_pushd					# ディレクトリをスタックに追加
